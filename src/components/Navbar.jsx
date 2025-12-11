@@ -21,10 +21,20 @@ const Navbar = () => {
     <nav className="bg-[#0b2b7a] text-white fixed top-0 left-0 w-full shadow-lg z-50 ">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 md:py-4">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <img src="/src/assets/ChatGPT Image Dec 5, 2025, 09_02_59 PM.jpg" alt="Logo" className="h-10 w-10 md:h-12 md:w-12" />
+        <Link to="/" className="flex items-center space-x-2">
+          <img
+            src="./src/assets/companylogo.png"
+            alt="Logo"
+            className="h-10 w-10 md:h-12 md:w-12"
+          />
+          <h1 className="text-lg md:text-xl font-bold tracking-wide">
+            Security Services
+          </h1>
+        </Link>
+        {/* <div className="flex items-center space-x-2">
+          <img src="/src/assets/logo.jpg" alt="Logo" className="h-10 w-10 md:h-12 md:w-12" />
           <h1 className="text-lg md:text-xl font-bold tracking-wide">Security Services</h1>
-        </div>
+        </div> */}
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center space-x-8 text-sm md:text-base font-medium">
@@ -49,7 +59,7 @@ const Navbar = () => {
           <button className="bg-yellow-400 text-[#0b2b7a] font-semibold px-4 py-1.5 rounded-md hover:bg-yellow-500 text-sm md:text-base transition duration-200">
             Sign In
           </button>*/}
-        </div> 
+        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -74,8 +84,8 @@ const Navbar = () => {
                   to={link.path}
                   onClick={() => setMenuOpen(false)}
                   className={`block w-full py-2 transition-colors duration-200 ${location.pathname === link.path
-                      ? "text-yellow-400"
-                      : "text-white hover:text-yellow-400"
+                    ? "text-yellow-400"
+                    : "text-white hover:text-yellow-400"
                     }`}
                 >
                   {link.name}
